@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Language Selection</title>
+    <style>
+        /* Global styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-image: url(carlineup.jpg);
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          min-height:100vh;
+        }
+        h1 {
+          margin-top: 0;
+          text-align: center;
+          background-color: #ffffff;
+          color: #ffffff;
+          padding: 20px;
+        }
+        form {
+          margin: 0 auto;
+          max-width: 800px;
+          padding: 20px;
+          background-color: #ffffff;
+          box-shadow: 0px 0px 20px #999999;
+          border-radius: 10px;
+        }
+  
+        /* Form styles */
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: #666666;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+          display: block;
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 20px;
+          box-sizing: border-box;
+          border-radius: 4px;
+          border: 1px solid #cccccc;
+          font-size: 16px;
+        }
+        input[type="date"],
+        input[type="datetime-local"] {
+          display: block;
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+        fieldset {
+          margin-bottom: 20px;
+          padding: 10px;
+          border-radius: 4px;
+          border: 1px solid #cccccc;
+        }
+        legend {
+          font-weight: bold;
+          color: #0072c6;
+        }
+        button[type="submit"] {
+          background-color: #0072c6;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          margin-top: 20px;
+        }
+        button[type="submit"]:hover {
+          background-color: #048df7;
+        }
+        .form-row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .form-row > div {
+          flex-basis: calc(50% - 10px);
+        }
+        .form-row > div:last-child {
+          flex-basis: 100%;
+          margin-top: 20px;
+        }
+  
+        /* EasyDrive styles */
+        h1 {
+          font-size: 48px;
+          letter-spacing: 3px;
+          margin-bottom: 40px;
+        }
+        label {
+          font-size: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+          font-size: 20px;
+        }
+        input[type="date"],
+        input[type="datetime-local"] {
+          font-size: 20px;
+        }
+        button[type="submit"] {
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+      </style>
+  </head>
+  <body>
+    <form id="language-form">
+        <h1>
+            <img src="easydrive-logo.jpg" alt="Easy Drive">
+          </h1>    
+      <label for="language">Select a Language:</label>
+      <select id="language" name="language">
+        <option value="">Choose a Language</option>
+        <option value="English">English</option>
+        <option value="French">Français</option>
+        <option value="Spanish">Español</option>
+        <option value="German">Deutsch</option>
+      </select>
+      <button type="submit" >Go</button>
+    </form>
+
+    <script>
+
+        const form = document.querySelector('#language-form');
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const language = document.querySelector('#language').value;
+          if (language == 'French') {
+            window.location.href = '/fr/easydrive.html';
+          } else if (language == 'Spanish'){
+            window.location.href = '/es/easydrive.html';
+          } else if (language == 'English'){
+            window.location.href = '/en/easydrive.html';
+          } else if(language == 'German'){
+            window.location.href = '/ger/easydrive.html';
+          }
+        });
+    
+      </script>
+
+</body>
+</html>
+
